@@ -1,0 +1,74 @@
+@import '../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery{
+    .gallery-cont{
+        margin-bottom: 9rem;
+        padding: 4rem 0 0;
+        .gallery-crds{
+            display: grid;
+            grid-template-columns: calc(100%/4.2) calc(100%/4.2) calc(100%/4.2) calc(100%/4.2);
+            justify-content: space-between;
+            row-gap: 1.8rem;
+            @media (max-width: 978px){
+                grid-template-columns: calc(100%/3.2) calc(100%/3.2) calc(100%/3.2);
+            }
+            @media (max-width: 787px){
+                grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+            }
+            @media (max-width: 471px){
+                grid-template-columns: 100%;
+            }
+            .gallery-crd{
+                width: 100%;
+                height: 230px;
+                border-radius: 5px;
+                overflow: hidden;
+                transform: rotate(5deg);
+                &:hover{
+                    img{
+                        transform: scale(1.1) rotate(-5deg);
+                    }
+                }
+                img{
+                    transform: scale(1);
+                    transition: .6s;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include ofMini;
+
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+@include miniHomeInner;
+@include footerMini;
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

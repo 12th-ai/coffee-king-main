@@ -1,0 +1,9 @@
+@media (max-width: 787px){
+    body{
+        @include container787;
+    }
+
+    @include footer787;
+
+    @include header787;
+}

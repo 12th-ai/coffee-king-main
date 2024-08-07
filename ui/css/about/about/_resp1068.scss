@@ -1,0 +1,10 @@
+@media (max-width: 1068px){
+    body{
+        @include container1068;
+    }
+
+    @include header1068;
+
+    @include footer1068;
+    @include skills1068;
+}

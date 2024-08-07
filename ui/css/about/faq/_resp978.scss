@@ -1,0 +1,11 @@
+@media (max-width: 978px){
+    body{
+        @include container978;
+    }
+
+    @include footer978;
+
+    @include sponsors978;
+
+    @include discount978;
+}

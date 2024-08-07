@@ -1,0 +1,8 @@
+@media (max-width: 581px){
+    body{
+        @include container581;
+    }
+    @include dealer581;
+
+    @include skills581;
+}

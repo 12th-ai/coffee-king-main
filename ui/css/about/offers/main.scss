@@ -1,0 +1,215 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include ofMini;
+
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+
+@include sponsors;
+
+@include discount;
+.discounts{
+    .discounts-cont{
+        margin-bottom: 10rem;
+    }
+}
+
+.offers{
+    .offers-cont{
+        padding: 4rem 0;
+        display: grid;
+        grid-template-columns: calc(100%/3.1) calc(100%/3.1) calc(100%/3.1);
+        justify-content: space-between;
+        grid-template-areas: 'side1 side2 side3';
+        .offers-sides{
+            display: flex;
+            flex-direction: column;
+            row-gap: 3rem;
+            .offers-crd{
+                box-shadow: rgba(204, 204, 204, 0.576) 0px 0px 19px -1px;
+                border-radius: 10px;
+                padding: 20px;
+                display: flex;
+                .offers-crd-nbrs{
+                    height: fit-content;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 25px;
+                    border-radius: 50%;
+                    font-weight: 800;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 20px;
+                    background: $brwn;
+                    color: $white;
+                }
+                .offers-crd-cnt{
+                    h2{
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        font-size: 1.1rem;
+                        margin: unset;
+                    }
+                }
+            }
+            .offers-right{
+                flex-direction: row-reverse;
+                text-align: right;
+                .offers-crd-nbrs{
+                    margin-left: 20px;
+                }
+            }
+        }
+        .sides-1{
+            grid-area: side1;
+        }
+        .sides-2{
+            grid-area: side2;
+        }
+        .sides-3{
+            grid-area: side3;
+        }
+        .offers-center-img{
+            height: fit-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.plans{
+    background: url(../../../assets/09/bg-table.jpg);
+    background-size: cover;
+    background-position: center;
+    .plans-cont{
+        padding: 7rem 0;
+        h2,h1{
+            text-align: center;
+        }
+        h2{
+            color: $brwn;
+        }
+        h1{
+            color: $white;
+        }
+        .plans-crds{
+            margin-top: 3rem;
+            display: grid;
+            grid-template-columns: calc(100%/4.2) calc(100%/4.2) calc(100%/4.2) calc(100%/4.2);
+            justify-content: space-between;
+            .plans-crd{
+                padding: 50px 30px;
+                border-radius: 10px;
+                background: white;
+                transform: scale(1);
+                transition: .6s;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                &:hover{
+                    transform: scale(1.03);
+                }
+                h3{
+                    text-align: center;
+                }
+                h1{
+                    color: $brwn;
+                }
+                .plan-crd-features{
+                    margin-top: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: .4rem;
+                    p{
+                        font-size: 1rem;
+                        display: flex;
+                        align-items: center;
+                        padding: 0;
+                        color: $blck;
+                        justify-content: center;
+                        svg{
+                            width: 15px;
+                            height: 15px;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+                .tickSvg{
+                    fill: green;
+                }
+                .crossSvg{
+                    fill: red;
+                }
+                .more{
+                    margin: 20px auto 0;
+                }
+            }
+            .activeCard{
+                border: .5rem solid $brwn;
+                background: $blckbg;
+                h3{
+                    color: $white;
+                }
+                h1{
+                    color: $abstipbg;
+                }
+                .more{
+                    background: $abstipbg;
+                    border: 2px solid $abstipbg;
+                    &:hover{
+                        background: transparent;
+                        color: $white;
+                    }
+                }
+                .plan-crd-features{
+                    p{
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include discountPg;
+
+.offers{
+    .offers-cont{
+        padding: 5rem 0;
+    }
+}
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

@@ -1,0 +1,120 @@
+@media (max-width: 581px){
+    body{
+        @include container581;
+    }
+
+    .home{
+        .home-cont{
+            padding: 5rem 0;
+            display: grid;
+            grid-template-columns: 100%;
+            .home-cont-left{
+                //
+                height: 100%;
+                .home-cont-left-first{
+                    //
+                    margin-bottom: 30px;
+                    h1{
+                        font-size: 55px;
+                    }
+                    h3{
+                        line-height: .9;
+                        font-size: 45px;
+                    }
+                }
+                p{
+                    font-size: 22px;
+                    margin-bottom: 30px;
+                }
+                .header-cont-left-lnks{
+                    display: flex;
+                    .more{
+                        display: unset;
+                    }
+                }
+            }
+            .home-cont-right{
+                //
+                height: 350px;
+                width: 100%;
+                margin: auto;
+                margin-top: 2rem;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .about{
+        // padding: 10rem 0;
+        .about-cont{
+            display: grid;
+            grid-template-columns: 100%;
+            justify-content: space-between;
+            .about-cont-left{
+                //
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-bottom: 2rem;
+                .about-cont-left-title{
+                    margin-bottom: 30px;
+                    p{
+                        font-size: 22px;
+                        font-weight: 700;
+                    }
+                    h1{
+                        font-size: 50px;
+                        line-height: .9;
+                    }
+                }
+                p{
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+                .about-cont-left-sign{
+                    //
+                    width: 133px;
+                    height: 74px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+            .about-cont-right{
+                display: grid;
+                grid-template-columns: 100%;
+                justify-content: space-between;
+                row-gap: 3rem;
+                margin-top: 2rem;
+                .about-cont-right-crd{
+                    //
+                    .about-cont-right-crd-img{
+                        margin-left: 20px;
+                        //
+                        width: 60px;
+                        height: 53px;
+                        margin-bottom: 15px;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    h1{
+                        font-size: 20px;
+                        margin-bottom: 5px;
+                    }
+                    p{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+    @include dealer581;
+
+    @include skills581;
+}

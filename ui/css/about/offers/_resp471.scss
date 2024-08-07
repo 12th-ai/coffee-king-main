@@ -1,0 +1,87 @@
+@media (max-width: 471px){
+    body{
+        @include container471;
+    }
+
+    @include bodyresp;
+    @include footer471;
+
+    @include sponsors471;
+
+    @include discount471;
+
+    .offers{
+        .offers-cont{
+            padding: 4rem 0;
+            display: grid;
+            justify-content: space-between;
+            grid-template-columns: 100%;
+            row-gap: 2rem;
+            grid-template-areas: 'side1 side1' 'side2 side2' 'side3 side3';
+            .offers-sides{
+                display: flex;
+                flex-direction: column;
+                row-gap: 3rem;
+                .offers-crd{
+                    box-shadow: rgba(204, 204, 204, 0.576) 0px 0px 19px -1px;
+                    border-radius: 10px;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    text-align: center;
+                    .offers-crd-nbrs{
+                        height: fit-content;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 25px;
+                        border-radius: 50%;
+                        font-weight: 800;
+                        width: 40px;
+                        height: 40px;
+                        margin: 0 auto 10px;
+                    }
+                    .offers-crd-cnt{
+                        h2{
+                            margin-bottom: 10px;
+                        }
+                        p{
+                            font-size: 1.1rem;
+                            margin: unset;
+                        }
+                    }
+                }
+                .offers-right{
+                    flex-direction: column;
+                    text-align: center;
+                    .offers-crd-nbrs{
+                        margin: 0 auto 10px;
+                    }
+                }
+            }
+            .sides-1{
+                grid-area: side1;
+            }
+            .sides-2{
+                grid-area: side2;
+            }
+            .sides-3{
+                grid-area: side3;
+            }
+            .offers-center-img{
+                height: fit-content;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include ofMini;
+
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+
+.faq{
+    .faq-cont{
+        padding: 5rem 0;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        margin-bottom: 1rem;
+        @include accordion;
+    }
+}
+
+@include crumb;
+.crumbs{
+    margin-bottom: 10rem;
+}
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

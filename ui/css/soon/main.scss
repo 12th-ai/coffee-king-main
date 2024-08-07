@@ -1,0 +1,124 @@
+@import '../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url(../../assets/09/page-construct.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $blckbg;
+}
+
+@include sponsors;
+
+@include discount;
+.soon{
+    .soon-cont{
+        padding: 16rem 0;
+        // @media (max-width: 1330px){
+        //     padding: 25rem 0;
+        // }
+        @media (max-width: 787px){
+            padding: 20rem 0;
+        }
+        @media (max-width: 581px){
+            padding: 10rem 0;
+        }
+        h1{
+            font-size: 70px;
+            color: white;
+            text-shadow: 20px 20px 0px rgba(0, 0, 0, 0.521);
+            width: 70%;
+            @media (max-width: 787px){
+                width: 100%;
+                font-size: 55px;
+            }
+            @media (max-width: 581px){
+                width: 100%;
+                font-size: 35px;
+                text-shadow: 10px 10px 0px rgba(0, 0, 0, 0.521);
+            }
+        }
+        p{
+            margin-top: 30px;
+            width: 53%;
+            font-size: 26px;
+            color: white;
+            @media (max-width: 787px){
+                width: 100%;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@include footer;
+
+@include map;
+
+@include header;
+
+@include dealer;
+
+header{
+    background: transparent !important;
+    box-shadow: 0 0 30px transparent;
+    .header-cont{
+        nav{
+            a{
+                &:hover{
+                    color: $white;
+                }
+            }
+            .dropdown{
+                button{
+                    &:hover{
+                        color: $white;
+                    }
+                }
+                button[class = activeNav]{
+                    color: white;
+                    @media(max-width: 1068px){
+                        color: $blck;
+                    }
+                }
+            }
+        }
+        .header-next{
+            .header-next-cart{
+                svg{
+                    fill: $brwn;
+                }
+            }
+        }
+        .menu-btn{
+            svg{
+                fill: $brwn;
+            }
+        }
+    }
+}
+
+// header{
+//     background: transparent;
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';
+// }
+header{
+    position: unset;
+    @media (max-width: 768px){
+    }
+}

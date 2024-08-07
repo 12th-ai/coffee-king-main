@@ -1,0 +1,59 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p[id = offStockP]{
+    color: red;
+    font-weight: 700;
+    margin: 30px 0;
+    display: none;
+}
+
+
+.tabs{
+    .tabs-cont{
+        margin-bottom: 10rem;
+    }
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include header;
+@include beforeFooter;
+
+@include footer;
+@include tabs;
+
+@include miniHome;
+@include miniHomeInner;
+@include miniHomePg;
+
+@include ofMini;
+
+.reset-pg{
+    margin-bottom: 9rem;
+    .reset-pg-cnt{
+        h1{
+            font-size: 2.4rem;
+            margin-top: 20px;
+            text-align: center;
+        }
+        @include form;
+    }
+}
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

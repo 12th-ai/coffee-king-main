@@ -1,0 +1,54 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+@include ofMini;
+
+.product-main{
+    padding: 5rem 0;
+    margin-bottom: 6rem;
+    .product-cont{
+        @include product-cont;
+        @include product-left;
+        .product-cont-right{
+            display: grid;
+            grid-template-columns: calc(100%/3.2) calc(100%/3.2) calc(100%/3.2);
+            justify-content: space-between;
+            row-gap: 1.7rem;
+            padding: 0 1rem;
+            grid-template-rows: auto 1fr;
+            @media (max-width: 1068px){
+                grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+            }
+            @media (max-width: 787px){
+                grid-template-columns: 100%;
+            }
+            @include productcard;
+        }
+    }
+}
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373'

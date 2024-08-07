@@ -1,0 +1,13 @@
+@media (max-width: 978px){
+    body{
+        @include container978;
+    }
+
+    @include map978;
+
+    @include footer978;
+
+    @include dealer978;
+
+    @include facts985;
+}

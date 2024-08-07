@@ -1,0 +1,62 @@
+@media (max-width: 1068px){
+    body{
+        @include container1068;
+    }
+
+    @include header1068;
+
+    @include sponsors1068;
+
+    @include footer1068;
+
+    .plans{
+        .plans-cont{
+            padding: 4rem 0;
+            h2,h1{
+                text-align: center;
+            }
+            .plans-crds{
+                margin-top: 3rem;
+                //
+                display: grid;
+                grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+                row-gap: 2rem;
+                justify-content: space-between;
+                .plans-crd{
+                    //
+                    padding: 30px 20px;
+                    h3{
+                        text-align: center;
+                    }
+                    .plan-crd-features{
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                        row-gap: .4rem;
+                        p{
+                            font-size: 1rem;
+                            display: flex;
+                            align-items: center;
+                            //
+                            padding: 0;
+                            svg{
+                                width: 15px;
+                                height: 15px;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    .tickSvg{
+                        fill: green;
+                    }
+                    .crossSvg{
+                        fill: red;
+                    }
+                    .more{
+                        margin: 20px auto 0;
+                    }
+                }
+            }
+        }
+    }
+}

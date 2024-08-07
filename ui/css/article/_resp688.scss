@@ -1,0 +1,105 @@
+@media (max-width: 688px){
+    body{
+        @include container688;
+    }
+
+    .main{
+        .main-cont{
+            padding: 5rem 1rem 11rem;
+            .main-cont-cnt{
+                width: 100%;
+                margin: auto;
+                p{
+                    font-size: 1.1rem;
+                    margin-bottom: 40px;
+                }
+                .main-cont-first{
+                    .main-cont-img{
+                        display: flex;
+                        margin: auto;
+                        width: 100%;
+                        margin-bottom: 40px;
+                        height: 430px;
+                        @media(max-width: 471px){
+                            height: 350px;
+                        }
+                    }
+                    .reference{
+                        display: flex;
+                        width: 95%;
+                        margin: auto;
+                        margin-bottom: 40px;
+                        hr{
+                            border: none;
+                            outline: none;
+                            width: 10px;
+                            margin-right: 20px;
+                        }
+                        h2{
+                            font-weight: 600;
+                            font-size: 1.3rem;
+                        }
+                    }
+                    .floatAlign{
+                        font-size: 1.25rem;
+                        font-weight: 300;
+                        display: flex;
+                        flex-direction: column;
+                        img{
+                            float: unset;
+                            width: 100%;
+                            object-fit: cover;
+                            height: 311px;
+                            margin: unset;
+                            margin: 0 auto 20px;
+                        }
+                    }
+                }
+                .dates{
+                    display: flex;
+                    width: fit-content;
+                    align-items: center;
+                    padding: 0 1.4rem;
+                    box-shadow: 0px 0px 19px -1px #cccccc93;
+                    border-radius: 5px;
+                    h2{
+                        font-size: 3rem;
+                        margin-right: 15px;
+                        color: $brwn;
+                    }
+                    p{
+                        font-size: 1.1rem;
+                        font-weight: 500;
+                        margin: unset;
+                    }
+                }
+                .blog-crumbs{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    margin-top: 40px;
+                    .blog-crumbs-link{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            font-weight: 600;
+                            font-size: 1rem;
+                            text-decoration: none;
+                            color: $brwn;
+                            svg{
+                                width: 20px;
+                                height: 20px;
+                                margin: 0 10px;
+                                fill: $brwn;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include ofMini;
+
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+
+.testimonial{
+    .testimonial-cont{
+        padding: 6rem 0;
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+        margin-bottom: 4rem;
+        .testimonial-crd{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h3{
+                font-size: 1.2rem;
+                color: $brwn;
+            }
+            p{
+                font-weight: 600;
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            h1{
+                font-size: 1.4rem;
+                font-weight: 600;
+                text-align: center;
+                margin-bottom: 30px;
+                @media (max-width: 471px){
+                    font-size: 1rem;
+                }
+            }
+            svg{
+                fill: $whitebg;
+                width: 60px;
+                height: 60px;
+            }
+        }
+        @include crumb;
+    }
+}
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

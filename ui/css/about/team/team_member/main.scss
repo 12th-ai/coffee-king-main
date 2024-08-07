@@ -1,0 +1,299 @@
+@import '../../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.member{
+    padding: 4rem 0; 
+    .member-cont{
+        margin-bottom: 6rem;
+        .member-cont-top{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            @media (max-width: 978px){
+                grid-template-columns: 100%;
+                row-gap: 2rem;
+            }
+            .member-cont-top-left{
+                display: grid;
+                grid-template-columns: 48% 48%;
+                justify-content: space-between;
+                @media (max-width: 581px){
+                    grid-template-columns: 100%;
+                    row-gap: 2rem;
+                }
+                .member-cont-top-left-img{
+                    border-radius: 8px;
+                    overflow: hidden;
+                    @media (max-width: 581px){
+                        height: 400px;
+                    }
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .member-cont-top-left-cnt{
+                    h1{
+                        font-size: 2.3rem;
+                        margin-bottom: -5px;
+                        color: $brwn;
+                        @media (max-width: 581px){
+                            font-size: 1.9rem;
+                        }
+                    }
+                    p{
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                        @media (max-width: 581px){
+                            font-size: 1rem;
+                        }
+                    }
+                    .member-cont-top-left-cnt-stats{
+                        margin-top: 40px;
+                        p{
+                            span{
+                                font-weight: 700;
+                                font-size: 1.4rem;
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                    .member-cont-top-left-cnt-contact{
+                        h1{
+                            margin: 10px 0;
+                            color: $brwn;
+                        }
+                        a{
+                            display: flex;
+                            font-weight: 600;
+                            text-decoration: none;
+                            width: fit-content;
+                            align-items: center;
+                            &:first-of-type{
+                                margin-bottom: 6px;
+                            }
+                            svg{
+                                width: 30px;
+                                height: 30px;
+                                margin-right: 13px;
+                                fill: $brwn;
+                            }
+                        }
+                    }
+                    .member-cont-top-left-cnt-socials{
+                        display: flex;
+                        margin-top: 20px;
+                        width: fit-content;
+                        a{
+                            width: 40px;
+                            height: 40px;
+                            padding: 9px;
+                            border-radius: 100%;
+                            display: flex;
+                            &:not(:first-of-type){
+                                margin-left: 10px;
+                            }
+                            &:nth-of-type(1){
+                                background: #4267b2;
+                                svg{
+                                    fill: white;
+                                }
+                            }
+                            &:nth-of-type(2){
+                                background: #1da1f2;
+                                svg{
+                                    fill: white;
+                                }
+                            }
+                            &:nth-of-type(3){
+                                background: #e1306c;
+                                svg{
+                                    fill: white;
+                                }
+                            }
+                            &:nth-of-type(4){
+                                background: #7289DA;
+                                svg{
+                                    fill: white;
+                                }
+                            }
+                            svg{
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+            .member-cont-top-right{
+                padding-left: 20px;
+                @media (max-width: 978px){
+                    padding-left: 0;
+                }
+                form{
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 1rem;
+                    padding: 20px;
+                    box-shadow:  rgba(189, 188, 188, 0.644) 0px 0px 19px -1px;
+                    border-radius: 8px;
+                    input,textarea{
+                        width: 100%;
+                        padding: 15px 20px;
+                        border: none;
+                        border-radius: 8px;
+                        box-shadow:  rgba(189, 188, 188, 0.644) 0px 0px 19px -1px;
+                        font-family: $font;
+                        outline: none;
+                        &::placeholder{
+                            font-family: $font;
+                        }
+                    }
+                    textarea{
+                        height: 150px;
+                        resize: none;
+                    }
+                    button{
+                        margin: auto;
+                        border-radius: 5px;
+                        font-family: $font;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .member-cont-btm{
+            margin-top: 40px;
+            display: grid;
+            grid-template-columns: calc(100%/3.1) calc(100%/3.1) calc(100%/3.1);
+            justify-content: space-between;
+            @media (max-width: 978px){
+                grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+                row-gap: 2rem;
+            }
+            @media (max-width: 581px){
+                grid-template-columns: 100%;
+                row-gap: 2rem;
+            }
+            .member-cont-btm-crd{
+                h1{
+                    font-size: 1.5rem;
+                    margin-bottom: 30px;
+                }
+                p{
+                    font-size: 1rem;
+                }
+                a{
+                    display: flex;
+                    width: fit-content;
+                    margin-top: 30px;
+                }
+            }
+            .member-cont-btm-crd-acc{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+            }
+            .member-cont-btm-crd-skills{
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                .member-cont-btm-crd-skill-card{
+                    box-shadow:  rgba(189, 188, 188, 0.644) 0px 0px 19px -1px;
+                    border-radius: 6px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px 15px;
+                    position: relative;
+                    overflow: hidden;
+                    // &:nth-of-type(1){
+                    //     &::before{
+                    //         width: 90%;
+                    //     }
+                    // }
+                    // &:nth-of-type(2){
+                    //     &::before{
+                    //         width: 75%;
+                    //     }
+                    // }
+                    // &:nth-of-type(3){
+                    //     &::before{
+                    //         width: 53%;
+                    //     }
+                    // }
+                    // &:nth-of-type(4){
+                    //     &::before{
+                    //         width: 61%;
+                    //     }
+                    // }
+                    // &::before{
+                    //     position: absolute;
+                    //     content: '';
+                    //     top: 0;
+                    //     left: 0;
+                    //     width: 50%;
+                    //     height: 100%;
+                    //     // background: $brwn;
+                    //     background: green;
+                    //     z-index: -1;
+                    //     border-radius: inherit;
+                    // }
+                    .skill-card-abs{
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        background: $brwn;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        z-index: -1;
+                        border-radius: inherit;
+                    }
+                    p{
+                        font-weight: 700;
+                    }
+                    .progressindicate{
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        // left: 50%
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include ofMini;
+
+@include accordion;
+@include miniHome;
+@include miniHomePg;
+@include beforeFooter;
+@include miniHomeOther;
+// .footer{
+//     background: url(../../../../assets/09/footer_map.png)
+// }
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373';

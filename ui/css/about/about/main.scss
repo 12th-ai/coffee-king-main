@@ -1,0 +1,114 @@
+@import '../../variables';
+@include body;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about{
+    .about-cont{
+        display: grid;
+        grid-template-columns: calc(100%/2.1) calc(100%/2.1);
+        justify-content: space-between;
+        padding: 4rem 0;
+        h3{
+            font-size: 24px;
+            color: $brwn;
+        }
+        h1{
+            margin-bottom: 12px;
+        }
+        p{
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        .about-cont-right{
+            box-shadow:  0 10px 33px -23px $blck;
+            border-radius: 7px;
+            overflow: hidden;
+            position: relative;
+            .about-cont-right-vid{
+                width: 100%;
+                height: 350px;
+                &:hover{
+                    .about-play-icon{
+                        opacity: 1;
+                        top: 50%;
+                    }
+                }
+                video{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .about-play-icon{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: $brwn;
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 18px;
+                animation: pulse 1.5s linear infinite;
+                opacity: 1;
+                transition: .6s ease;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                @keyframes pulse {
+                    from{
+                        box-shadow: 0 0 0px 0 $brwn;
+                    }to{
+                        box-shadow: 0 0 0px 30px transparent;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include header;
+
+@include headerOfMini;
+
+@include footer;
+
+@include header;
+
+@include dealer;
+
+@include ofMini;
+
+@include miniHome;
+
+@include facts;
+
+@include skills;
+@include map;
+
+.skills{
+    background: url(../../../assets/09/Rectangle-27-copy-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+@include miniHomePg;
+@include beforeFooter;
+
+@import './resp1299';
+@import './resp1068';
+@import './resp978';
+@import './resp787';
+@import './resp688';
+@import './resp581';
+@import './resp471';
+@import './resp373'
